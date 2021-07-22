@@ -1,0 +1,35 @@
+.body {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.outer_container {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  top: 250px;
+  color: #ffbf00;
+  font-family: OldStandardTT-Regular, Arial, sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  .body {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  .outer_container {
+    top: 80px;
+  }
+}

@@ -1,0 +1,38 @@
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  color: #ffbf00;
+}
+
+.navContainer ul li {
+  margin: 20px;
+  pointer-events: auto;
+}
+.navContainer {
+  color: #ffbf00;
+}
+a {
+  color: #e49b0f;
+  text-decoration: none;
+}
+.navContainer:hover {
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .navContainer ul li {
+    pointer-events: auto;
+  }
+  .link {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+li::before {
+  color: #ffbf00;
+}

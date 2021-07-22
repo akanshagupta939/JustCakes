@@ -1,0 +1,45 @@
+.body {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+}
+.contactLink {
+  line-height: 10px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  color: #e49b0f;
+  margin: 10px;
+}
+.contactLink:hover {
+  color: chocolate;
+}
+.outer_container {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  top: 100px;
+  color: #e49b0f;
+  font-family: OldStandardTT-Regular, Arial, sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  .body {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  .outer_container {
+    top: 80px;
+  }
+}
