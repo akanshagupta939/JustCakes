@@ -1,14 +1,14 @@
 .App {
   box-sizing: border-box;
 }
-.container {
+.particle_background {
   background-color: white;
   color: #ebd9e6;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
 }
-.inner_container {
+.header {
   position: relative;
   pointer-events: none;
   font-family: OldStandardTT-Regular, Arial, sans-serif;

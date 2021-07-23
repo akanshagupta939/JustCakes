@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./styles.module.scss";
 import Particles from "react-particles-js";
 import { Navigation } from "./components/navigation";
 import { Route, Switch } from "react-router-dom";
@@ -104,8 +104,11 @@ function App() {
   };
   return (
     <div className="App">
-      <Particles params={particleConfig} className="container" />
-      <div className="inner_container">
+      <Particles
+        params={particleConfig}
+        className={styles.particle_background}
+      />
+      <div className={styles.header}>
         <Navigation></Navigation>
       </div>
 
