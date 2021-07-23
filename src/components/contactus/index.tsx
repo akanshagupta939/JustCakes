@@ -21,6 +21,7 @@ export const ContactUs = (resumeData: ResumeDate) => {
         </motion.h5>
         <a
           className={styles.contactLink}
+          target="blank"
           href="https://www.facebook.com/JustCakesGurugram/"
         >
           Join Us on Facebook
@@ -28,6 +29,7 @@ export const ContactUs = (resumeData: ResumeDate) => {
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a
           className={styles.contactLink}
+          target="blank"
           href="https://instagram.com/justcakes_gurgaon?igshid=1a1zqr707fl9w"
         >
           Sneak Peak on our Instagram Account{" "}
