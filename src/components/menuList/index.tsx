@@ -1,81 +1,25 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
+
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import classes from "./styles.module.scss";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+// import classes from "./styles.module.scss";
+
 import tileData, { useStyles } from "./tileData";
-
-interface TileData {
-  image: string;
-  titled: string;
-  price: string;
-  featured?: boolean;
-}
-
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//     position: "relative",
-//     top: 0,
-//     bottom: 0,
-//     fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
-//   },
-//   inner_root: {
-//     justifyContent: "center",
-//   },
-//   paper: {
-//     height: 300,
-//     width: 350,
-//   },
-//   img: {
-//     margin: "auto",
-//     display: "block",
-//     maxWidth: "100%",
-//     maxHeight: "60%",
-//     paddingLeft: "10%",
-//   },
-//   control: {
-//     bottom: 0,
-//     textAlign: "center",
-//     padding: "10%",
-//   },
-//   media: {
-//     height: 0,
-//     paddingTop: "56.25%", // 16:9
-//   },
-//   expand: {
-//     transform: "rotate(0deg)",
-//     marginLeft: "auto",
-//     transition: theme.transitions.create("transform", {
-//       duration: theme.transitions.duration.shortest,
-//     }),
-//   },
-//   expandOpen: {
-//     transform: "rotate(180deg)",
-//   },
-//   avatar: {
-//     backgroundColor: "#FBBF24",
-//   },
-// }));
 
 export const MenuList = () => {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  // const [expanded, setExpanded] = React.useState(false);
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
   console.log(tileData);
   return (
     <>
