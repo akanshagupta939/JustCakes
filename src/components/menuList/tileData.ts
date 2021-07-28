@@ -100,8 +100,14 @@ const tileData = [
     category: "Chocolate",
   },
   {
-    img: "https://cdn.w600.comps.canstockphoto.com/black-forest-cake-isolated-on-white-pictures_csp70703889.jpg",
-    title: "Black Forest",
+    img: "https://www.pngkit.com/png/detail/945-9458263_chocolate-cakes-white-background.png",
+    title: "Chocolate",
+    price: "Rs. 500",
+    category: "Chocolate",
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0014/2249/1720/products/MGDCAK2017017_300x300.jpg?v=1533114332",
+    title: "Chocolate Crunch",
     price: "Rs. 550",
     category: "Chocolate",
   },
@@ -176,6 +182,18 @@ const tileData = [
     img: "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18234125/AbChoc_FlourlessMarbleCake-main.jpg",
     title: "Marbel cake",
     price: "Rs. 450",
+    category: "Dry",
+  },
+  {
+    img: "https://wiselivingmagazine.co.uk/wp-content/uploads/2019/12/Vegan-almond-and-semolina-sugee-cake-main.jpg",
+    title: "Suji Cake",
+    price: "Rs. 350",
+    category: "Dry",
+  },
+  {
+    img: "https://food-images.files.bbci.co.uk/food/recipes/chocolate_and_hazelnut_38207_16x9.jpg",
+    title: "Chocolate Attta Walnut Cake",
+    price: "Rs. 550",
     category: "Dry",
   },
 ];
