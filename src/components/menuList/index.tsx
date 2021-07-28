@@ -5,11 +5,10 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import Dialog from "@material-ui/core/Dialog";
 // import classes from "./styles.module.scss";
 
 import tileData, { useStyles } from "./tileData";
@@ -19,77 +18,45 @@ export interface TileDataProps {
   price: string;
   category: string;
 }
+export const CardHolder = (props: { value: TileDataProps }) => {
+  const classes = useStyles();
+  return (
+    <Grid direction="row" key={props.value.title} item>
+      <Card className={classes.root}>
+        <CardHeader
+          avatar={
+            <Avatar aria-label="recipe" className={classes.avatar}>
+              {props.value.title.charAt(0)}
+            </Avatar>
+          }
+          title={props.value.title}
+          subheader="Vegetarian Half KG"
+        />
+        <CardMedia
+          className={classes.media}
+          image={props.value.img}
+          title={props.value.title}
+        />
+        <CardContent>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {props.value.price}
+          </Typography>
+        </CardContent>
+        <CardActions disableSpacing></CardActions>
+      </Card>
+    </Grid>
+  );
+};
 export const MenuList = (props: { passedTileData: TileDataProps[] }) => {
   const classes = useStyles();
-  // const [expanded, setExpanded] = React.useState(false);
-  // const handleExpandClick = () => {
-  //   setExpanded(!expanded);
-  // };
+
   return (
     <>
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12}>
           <Grid container className={classes.inner_root} spacing={3}>
             {props.passedTileData?.map((value: TileDataProps) => (
-              <Grid direction="row" key={value.title} item>
-                <Card className={classes.root}>
-                  <CardHeader
-                    avatar={
-                      <Avatar aria-label="recipe" className={classes.avatar}>
-                        {value.title.charAt(0)}
-                      </Avatar>
-                    }
-                    // action={
-                    //   <IconButton aria-label="settings">
-                    //     <MoreVertIcon />
-                    //   </IconButton>
-                    // }
-                    title={value.title}
-                    subheader="September 14, 2016"
-                  />
-                  <CardMedia
-                    className={classes.media}
-                    image={value.img}
-                    title={value.title}
-                  />
-                  <CardContent>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      {value.price}
-                    </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing>
-                    {/* <IconButton aria-label="add to favorites">
-                      <FavoriteIcon />
-                    </IconButton> */}
-                    {/* <IconButton aria-label="share">
-                      <ShareIcon />
-                    </IconButton> */}
-                    {/* <IconButton
-                      className={clsx(classes.expand, {
-                        [classes.expandOpen]: expanded,
-                      })}
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
-                      aria-label="show more"
-                    >
-                      <ExpandMoreIcon />
-                    </IconButton> */}
-                  </CardActions>
-                  {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                      <Typography paragraph>Method:</Typography>
-                      <Typography paragraph>{value.price}</Typography>
-                      <Typography paragraph>{value.title}</Typography>
-                      <Typography paragraph>{value.title}</Typography>
-                      <Typography>{value.title}</Typography>
-                    </CardContent>
-                  </Collapse> */}
-                </Card>
-              </Grid>
+              <CardHolder value={value}></CardHolder>
             ))}
           </Grid>
         </Grid>
