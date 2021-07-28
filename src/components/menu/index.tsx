@@ -10,15 +10,15 @@ import styles from "./styles.module.scss";
 
 const accordionData = [
   {
-    title: "Chocolate Cake",
+    title: "Chocolate Cakes",
     category: "Chocolate",
   },
   {
-    title: "Fruit Cake",
+    title: "Fruit Cakes",
     category: "Fruit",
   },
   {
-    title: "Dry Cake",
+    title: "Dry Cakes",
     category: "Dry",
   },
   {

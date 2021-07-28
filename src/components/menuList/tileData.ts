@@ -180,7 +180,7 @@ const tileData = [
   },
   {
     img: "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18234125/AbChoc_FlourlessMarbleCake-main.jpg",
-    title: "Marbel cake",
+    title: "Marble cake",
     price: "Rs. 450",
     category: "Dry",
   },

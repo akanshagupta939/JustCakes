@@ -7,7 +7,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 800px;
-  top: 250px;
+  top: 100px;
   color: #ffbf00;
   font-family: OldStandardTT-Regular, Arial, sans-serif;
 }
@@ -39,4 +39,9 @@
 .textStyling {
   animation: pulse 3s;
   font-size: 100px;
+}
+
+.textStyling_subheader {
+  animation: pulse 3s;
+  font-size: 50px;
 }
