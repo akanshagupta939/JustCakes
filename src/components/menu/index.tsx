@@ -1,6 +1,5 @@
-import Typography from "@material-ui/core/Typography";
 import React from "react";
-import { MenuList, TileDataProps } from "../menuList";
+import { MenuList } from "../menuList";
 import tileData, {
   Accordion,
   AccordionSummary,

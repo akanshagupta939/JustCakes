@@ -4,6 +4,11 @@ import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 export const Accordion = withStyles({
+  typography: {
+    body2: {
+      fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
+    },
+  },
   root: {
     borderRadius: "10px",
     boxShadow: "none",
@@ -21,6 +26,11 @@ export const Accordion = withStyles({
 })(MuiAccordion);
 
 export const AccordionSummary = withStyles({
+  typography: {
+    body2: {
+      fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
+    },
+  },
   root: {
     borderRadius: "10px",
     borderBottom: "1px rgba(0, 0, 0, .125)",
@@ -42,12 +52,22 @@ export const AccordionSummary = withStyles({
 })(MuiAccordionSummary);
 
 export const AccordionDetails = withStyles((theme) => ({
+  typography: {
+    body2: {
+      fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
+    },
+  },
   root: {
     padding: theme.spacing(2),
   },
 }))(MuiAccordionDetails);
 
 export const useStyles = makeStyles((theme) => ({
+  typography: {
+    body2: {
+      fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
+    },
+  },
   root: {
     flexGrow: 1,
     position: "relative",
@@ -90,7 +110,11 @@ export const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: "rotate(180deg)",
   },
+  card: {
+    fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
+  },
   avatar: {
+    fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
     backgroundColor: "#e49b0f",
   },
 }));
@@ -109,7 +133,7 @@ const tileData = [
   },
   {
     img: "https://www.pngkit.com/png/detail/945-9458263_chocolate-cakes-white-background.png",
-    title: "Chocolate",
+    title: "Chocolate Cake",
     price: "Rs. 500",
     category: "Chocolate",
     description:

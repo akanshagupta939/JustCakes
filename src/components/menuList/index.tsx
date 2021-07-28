@@ -9,7 +9,9 @@ import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import { useStyles } from "./tileData";
 import { DialogContent, DialogTitle, Dialog } from "@material-ui/core";
+
 import styles from "./styles.module.scss";
+
 export interface TileDataProps {
   img: string;
   title: string;
@@ -26,26 +28,37 @@ export const CardHolder = (props: { value: TileDataProps }) => {
   const handleClose = () => {
     setOpen(false);
   };
+  const textTitle = (val: string, type: string) => {
+    return (
+      <Typography gutterBottom variant="h5" component="h2">
+        <p className={type === "header" ? styles.card : styles.card_subHeader}>
+          {val}
+        </p>
+      </Typography>
+    );
+  };
   return (
     <Grid direction="row" key={props.value.title} item>
       <Card onClick={() => setOpen(true)} className={classes.root}>
         <CardHeader
+          className={styles.card}
           avatar={
             <Avatar aria-label="recipe" className={classes.avatar}>
               {props.value.title.charAt(0)}
             </Avatar>
           }
-          title={props.value.title}
-          subheader="Vegetarian Half KG"
+          title={textTitle(props.value.title, "header")}
+          subheader={textTitle("Vegetarian Half KG", "subheader")}
         />
         <CardMedia
+          style={{ fontFamily: "" }}
           className={classes.media}
           image={props.value.img}
           title={props.value.title}
         />
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.value.price}
+          <Typography component="p">
+            <p className={styles.card_subHeader}> {props.value.price}</p>
           </Typography>
         </CardContent>
         <CardActions disableSpacing></CardActions>
@@ -56,16 +69,23 @@ export const CardHolder = (props: { value: TileDataProps }) => {
         </DialogTitle>
         <DialogContent dividers>
           <CardMedia
-            style={{ fontFamily: "OldStandardTT-Regular, Arial, sans-serif" }}
             className={classes.media}
             image={props.value.img}
             title={props.value.title}
           />
           &nbsp;
-          <Typography gutterBottom>{props.value.description}</Typography>
+          <Typography gutterBottom>
+            <p className={styles.description}> {props.value.description}</p>
+          </Typography>
           &nbsp;
-          <Typography gutterBottom>{props.value.celebration}</Typography>
-          <Typography gutterBottom>{props.value.sizeDescription}</Typography>
+          <Typography gutterBottom>
+            <p className={styles.celebration}> {props.value.celebration}</p>
+          </Typography>
+          <Typography gutterBottom>
+            <p className={styles.sizeDescription}>
+              {props.value.sizeDescription}
+            </p>
+          </Typography>
         </DialogContent>
       </Dialog>
     </Grid>

@@ -1,17 +1,24 @@
-.dialog_title {
+.description,
+.celebration,
+.sizeDescription {
   text-align: center;
   font-family: OldStandardTT-Regular, Arial, sans-serif;
 }
-.media {
-  height: 0;
-  padding-top: "56.25%"; // 16:9
-}
-.MuiCardMedia-root {
+.dialog_title {
+  text-align: center;
   font-family: OldStandardTT-Regular, Arial, sans-serif;
+  font-weight: bolder;
 }
-.MuiTypography-body2 {
-  font-family: OldStandardTT-Regular, Arial, sans-serif;
+.card {
+  font-family: OldStandardTT-Regular, Arial, sans-serif !important;
+  font-size: 1rem;
+  margin: 0;
 }
-* {
+.card_subHeader {
+  font-family: OldStandardTT-Regular, Arial, sans-serif !important;
+  font-size: 0.8rem;
+  margin: 0;
+}
+span.MuiTypography-root.MuiCardHeader-title.MuiTypography-body2.MuiTypography-displayBlock {
   font-family: OldStandardTT-Regular, Arial, sans-serif;
 }
