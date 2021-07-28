@@ -1,49 +1,17 @@
-// .menu_outerContainer {
-//   position: relative;
-//   padding: 20px;
-//   box-sizing: border-box;
-//   margin: auto;
-//   background-color: red;
-//   top: 0;
-//   bottom: 0;
-// }
-
-.root {
-  flex-grow: 1;
-  position: "relative";
-  top: 0;
-  bottom: 0;
-  font-family: "OldStandardTT-Regular, Arial, sans-serif";
-}
-.inner_root {
-  justify-content: "center";
-}
-
-.img {
-  margin: "auto";
-  display: "block";
-  max-width: "100%";
-  max-height: "60%";
-  padding-left: "10%";
-}
-.control {
-  bottom: 0;
-  text-align: "center";
-  padding: "10%";
+.dialog_title {
+  text-align: center;
+  font-family: OldStandardTT-Regular, Arial, sans-serif;
 }
 .media {
   height: 0;
   padding-top: "56.25%"; // 16:9
 }
-// .expand {
-//   transform: "rotate(0deg)";
-//   margin-left: "auto";
-//   transition: theme.transitions.create("transform")
-//     ({duration: theme.transitions.duration.shortest});
-// }
-.expandopen {
-  transform: "rotate(180deg)";
+.MuiCardMedia-root {
+  font-family: OldStandardTT-Regular, Arial, sans-serif;
 }
-.avatar {
-  background-color: "#FBBF24";
+.MuiTypography-body2 {
+  font-family: OldStandardTT-Regular, Arial, sans-serif;
+}
+* {
+  font-family: OldStandardTT-Regular, Arial, sans-serif;
 }

@@ -6,23 +6,29 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import Dialog from "@material-ui/core/Dialog";
-// import classes from "./styles.module.scss";
-
-import tileData, { useStyles } from "./tileData";
+import { useStyles } from "./tileData";
+import { DialogContent, DialogTitle, Dialog } from "@material-ui/core";
+import styles from "./styles.module.scss";
 export interface TileDataProps {
   img: string;
   title: string;
   price: string;
   category: string;
+  description: string;
+  celebration?: string;
+  sizeDescription?: string;
 }
+
 export const CardHolder = (props: { value: TileDataProps }) => {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <Grid direction="row" key={props.value.title} item>
-      <Card className={classes.root}>
+      <Card onClick={() => setOpen(true)} className={classes.root}>
         <CardHeader
           avatar={
             <Avatar aria-label="recipe" className={classes.avatar}>
@@ -44,6 +50,24 @@ export const CardHolder = (props: { value: TileDataProps }) => {
         </CardContent>
         <CardActions disableSpacing></CardActions>
       </Card>
+      <Dialog onClose={handleClose} open={open}>
+        <DialogTitle className={styles.dialog_title} id={props.value.title}>
+          <p className={styles.dialog_title}> {props.value.title}</p>
+        </DialogTitle>
+        <DialogContent dividers>
+          <CardMedia
+            style={{ fontFamily: "OldStandardTT-Regular, Arial, sans-serif" }}
+            className={classes.media}
+            image={props.value.img}
+            title={props.value.title}
+          />
+          &nbsp;
+          <Typography gutterBottom>{props.value.description}</Typography>
+          &nbsp;
+          <Typography gutterBottom>{props.value.celebration}</Typography>
+          <Typography gutterBottom>{props.value.sizeDescription}</Typography>
+        </DialogContent>
+      </Dialog>
     </Grid>
   );
 };
