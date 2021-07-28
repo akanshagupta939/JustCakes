@@ -4,7 +4,7 @@ import { Navigation } from "./components/navigation";
 import { Route, Switch } from "react-router-dom";
 import { Home } from "./components/home";
 import { ContactUs } from "./components/contactus";
-import { MenuList } from "./components/menuList";
+import { Menu } from "./components/menu";
 function App() {
   const particleConfig: any = {
     particles: {
@@ -114,7 +114,7 @@ function App() {
 
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/menu" component={MenuList} />
+        <Route path="/menu" component={Menu} />
         <Route path="/contact" component={ContactUs} />
         {/* <Route component={Error} />  */}
       </Switch>

@@ -13,20 +13,24 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 // import classes from "./styles.module.scss";
 
 import tileData, { useStyles } from "./tileData";
-
-export const MenuList = () => {
+export interface TileDataProps {
+  img: string;
+  title: string;
+  price: string;
+  category: string;
+}
+export const MenuList = (props: { passedTileData: TileDataProps[] }) => {
   const classes = useStyles();
   // const [expanded, setExpanded] = React.useState(false);
   // const handleExpandClick = () => {
   //   setExpanded(!expanded);
   // };
-  console.log(tileData);
   return (
     <>
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12}>
           <Grid container className={classes.inner_root} spacing={3}>
-            {tileData.map((value) => (
+            {props.passedTileData?.map((value: TileDataProps) => (
               <Grid direction="row" key={value.title} item>
                 <Card className={classes.root}>
                   <CardHeader
@@ -58,9 +62,9 @@ export const MenuList = () => {
                     </Typography>
                   </CardContent>
                   <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
+                    {/* <IconButton aria-label="add to favorites">
                       <FavoriteIcon />
-                    </IconButton>
+                    </IconButton> */}
                     {/* <IconButton aria-label="share">
                       <ShareIcon />
                     </IconButton> */}
