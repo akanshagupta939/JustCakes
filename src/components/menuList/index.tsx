@@ -9,7 +9,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import { useStyles } from "./tileData";
 import { DialogContent, DialogTitle, Dialog } from "@material-ui/core";
-
+import { v4 as uuidv4 } from "uuid";
 import styles from "./styles.module.scss";
 
 export interface TileDataProps {
@@ -30,7 +30,7 @@ export const CardHolder = (props: { value: TileDataProps }) => {
   };
   const textTitle = (val: string, type: string) => {
     return (
-      <Typography gutterBottom variant="h5" component="h2">
+      <Typography variant="h5" component="h2" gutterBottom>
         <p className={type === "header" ? styles.card : styles.card_subHeader}>
           {val}
         </p>
@@ -38,57 +38,59 @@ export const CardHolder = (props: { value: TileDataProps }) => {
     );
   };
   return (
-    <Grid direction="row" key={props.value.title} item>
-      <Card onClick={() => setOpen(true)} className={classes.root}>
-        <CardHeader
-          className={styles.card}
-          avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
-              {props.value.title.charAt(0)}
-            </Avatar>
-          }
-          title={textTitle(props.value.title, "header")}
-          subheader={textTitle("Vegetarian Half KG", "subheader")}
-        />
-        <CardMedia
-          style={{ fontFamily: "" }}
-          className={classes.media}
-          image={props.value.img}
-          title={props.value.title}
-        />
-        <CardContent>
-          <Typography component="p">
-            <p className={styles.card_subHeader}> {props.value.price}</p>
-          </Typography>
-        </CardContent>
-        <CardActions disableSpacing></CardActions>
-      </Card>
-      <Dialog onClose={handleClose} open={open}>
-        <DialogTitle className={styles.dialog_title} id={props.value.title}>
-          <p className={styles.dialog_title}> {props.value.title}</p>
-        </DialogTitle>
-        <DialogContent dividers>
+    <>
+      <Grid container direction="row" key={props.value.title} item>
+        <Card onClick={() => setOpen(true)} className={classes.root}>
+          <CardHeader
+            className={styles.card}
+            avatar={
+              <Avatar aria-label="cake" className={classes.avatar}>
+                {props.value.title.charAt(0)}
+              </Avatar>
+            }
+            title={textTitle(props.value.title, "header")}
+            subheader={textTitle("Vegetarian Half KG", "subheader")}
+          />
           <CardMedia
+            style={{ fontFamily: "" }}
             className={classes.media}
             image={props.value.img}
             title={props.value.title}
           />
-          &nbsp;
-          <Typography gutterBottom>
-            <p className={styles.description}> {props.value.description}</p>
-          </Typography>
-          &nbsp;
-          <Typography gutterBottom>
-            <p className={styles.celebration}> {props.value.celebration}</p>
-          </Typography>
-          <Typography gutterBottom>
-            <p className={styles.sizeDescription}>
-              {props.value.sizeDescription}
-            </p>
-          </Typography>
-        </DialogContent>
-      </Dialog>
-    </Grid>
+          <CardContent>
+            <Typography variant="h5" component="h2">
+              <p className={styles.card_subHeader}> {props.value.price}</p>
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing></CardActions>
+        </Card>
+        <Dialog onClose={handleClose} open={open}>
+          <DialogTitle id={props.value.title}>
+            <p className={styles.dialog_title}> {props.value.title}</p>
+          </DialogTitle>
+          <DialogContent dividers>
+            <CardMedia
+              className={classes.media}
+              image={props.value.img}
+              title={props.value.title}
+            />
+            &nbsp;
+            <Typography variant="h5" component="h2" gutterBottom>
+              <p className={styles.description}> {props.value.description}</p>
+            </Typography>
+            &nbsp;
+            <Typography variant="h5" component="h2" gutterBottom>
+              <p className={styles.celebration}> {props.value.celebration}</p>
+            </Typography>
+            <Typography variant="h5" component="h2" gutterBottom>
+              <p className={styles.sizeDescription}>
+                {props.value.sizeDescription}
+              </p>
+            </Typography>
+          </DialogContent>
+        </Dialog>
+      </Grid>
+    </>
   );
 };
 export const MenuList = (props: { passedTileData: TileDataProps[] }) => {
@@ -100,7 +102,7 @@ export const MenuList = (props: { passedTileData: TileDataProps[] }) => {
         <Grid item xs={12}>
           <Grid container className={classes.inner_root} spacing={3}>
             {props.passedTileData?.map((value: TileDataProps) => (
-              <CardHolder value={value}></CardHolder>
+              <CardHolder key={uuidv4()} value={value}></CardHolder>
             ))}
           </Grid>
         </Grid>

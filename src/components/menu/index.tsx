@@ -1,4 +1,5 @@
 import React from "react";
+
 import { MenuList } from "../menuList";
 import tileData, {
   Accordion,
@@ -40,8 +41,9 @@ export const Menu = (category: Array<string>) => {
   return (
     <>
       {accordionData.map(({ title, category }) => (
-        <div className={styles.menu_container}>
+        <div key={category} className={styles.menu_container}>
           <Accordion
+            key={category}
             square
             expanded={expanded === title}
             onChange={handleChange(title)}
@@ -53,7 +55,6 @@ export const Menu = (category: Array<string>) => {
               {category ? (
                 <MenuList passedTileData={filterTileData(category)} />
               ) : (
-                // <MenuList passedTileData={a} />
                 <h1>Hii</h1>
               )}
             </AccordionDetails>

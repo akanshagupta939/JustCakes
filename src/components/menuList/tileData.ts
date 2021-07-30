@@ -4,11 +4,6 @@ import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 export const Accordion = withStyles({
-  typography: {
-    body2: {
-      fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
-    },
-  },
   root: {
     borderRadius: "10px",
     boxShadow: "none",
@@ -26,11 +21,6 @@ export const Accordion = withStyles({
 })(MuiAccordion);
 
 export const AccordionSummary = withStyles({
-  typography: {
-    body2: {
-      fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
-    },
-  },
   root: {
     borderRadius: "10px",
     borderBottom: "1px rgba(0, 0, 0, .125)",
@@ -52,11 +42,6 @@ export const AccordionSummary = withStyles({
 })(MuiAccordionSummary);
 
 export const AccordionDetails = withStyles((theme) => ({
-  typography: {
-    body2: {
-      fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
-    },
-  },
   root: {
     padding: theme.spacing(2),
   },
@@ -100,7 +85,6 @@ export const useStyles = makeStyles((theme) => ({
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
-    fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -111,9 +95,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   expandOpen: {
     transform: "rotate(180deg)",
-  },
-  card: {
-    fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
   },
   avatar: {
     fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
