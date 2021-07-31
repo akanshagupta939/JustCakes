@@ -62,10 +62,6 @@ export const useStyles = makeStyles((theme) => ({
     bottom: 0,
     fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
   },
-  outer_root: {
-    flex: 1,
-    maxWidth: "15%",
-  },
   inner_root: {
     justifyContent: "center",
   },
@@ -105,6 +101,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: "#e49b0f",
   },
 }));
+
 const tileData = [
   {
     img: "https://t4.ftcdn.net/jpg/02/52/80/65/360_F_252806534_HkpmruoDjSPwXx4X9y4Lht8WBmj9GfEN.jpg",

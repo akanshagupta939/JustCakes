@@ -2,16 +2,18 @@
 .celebration,
 .sizeDescription {
   text-align: center;
+  font-size: 1rem;
   font-family: OldStandardTT-Regular, Arial, sans-serif;
 }
 .dialog_title {
   text-align: center;
+  font-size: 1 rem;
   font-family: OldStandardTT-Regular, Arial, sans-serif;
   font-weight: bolder;
 }
 .card {
   font-family: OldStandardTT-Regular, Arial, sans-serif !important;
-  font-size: 1rem;
+  font-size: 1.2 rem;
   margin: 0;
 }
 .card_subHeader {
@@ -21,4 +23,15 @@
 }
 span.MuiTypography-root.MuiCardHeader-title.MuiTypography-body2.MuiTypography-displayBlock {
   font-family: OldStandardTT-Regular, Arial, sans-serif;
+}
+.outer_root {
+  flex: 1;
+  max-width: 15%;
+}
+@media screen and (max-width: 1200px) {
+  .outer_root {
+    flex: none;
+    max-width: none;
+    width: 50%;
+  }
 }

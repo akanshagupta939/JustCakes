@@ -39,7 +39,7 @@ export const CardHolder = (props: { value: TileDataProps }) => {
   };
   return (
     <>
-      <Grid className={classes.outer_root} key={props.value.title} item>
+      <Grid className={styles.outer_root} key={props.value.title} item>
         <Card onClick={() => setOpen(true)} className={classes.root}>
           <CardHeader
             className={styles.card}
