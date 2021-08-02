@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { MenuList } from "../menuList";
 import tileData, {
@@ -7,6 +7,11 @@ import tileData, {
   AccordionDetails,
 } from "../menuList/tileData";
 import styles from "./styles.module.scss";
+/* src/App.js */
+import Amplify, { API, graphqlOperation } from "aws-amplify";
+import { Observable } from "rxjs";
+import { listCakes } from "../../graphql/queries";
+import { GraphQLResult } from "@aws-amplify/api-graphql";
 
 const accordionData = [
   {
@@ -26,17 +31,50 @@ const accordionData = [
     category: "Special",
   },
 ];
-const filterTileData = (category: string) => {
-  const xx = tileData.filter((x) => x.category.includes(category));
-  return xx;
+
+export type ICakes = {
+  title: String;
+  price: String;
+  category: String;
+  description: String;
+  celebration: String;
+  sizeDescription: String;
+};
+export type ListCakesQuery = {
+  listCakes: {
+    items: ICakes[];
+    nextToken: string;
+  };
 };
 
 export const Menu = (category: Array<string>) => {
   const [expanded, setExpanded] = React.useState<string | false>("A");
+  let [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+  async function fetchTodos() {
+    try {
+      const cakeApi = (await API.graphql(graphqlOperation(listCakes))) as {
+        data: ListCakesQuery;
+      };
+      console.log(cakeApi);
+      todos = cakeApi.data.listCakes.items as any;
+      setTodos(todos);
+    } catch (err) {
+      console.log("error fetching todos");
+    }
+  }
   const handleChange =
     (panel: string) => (event: React.ChangeEvent<{}>, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
+  const filterTileData = (category: string) => {
+    const xx = todos?.filter((x: any) => x?.category.includes(category));
+
+    return xx;
+  };
 
   return (
     <>

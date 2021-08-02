@@ -13,7 +13,7 @@ import { v4 as uuidv4 } from "uuid";
 import styles from "./styles.module.scss";
 
 export interface TileDataProps {
-  img: string;
+  imgLocation: string;
   title: string;
   price: string;
   category: string;
@@ -39,22 +39,17 @@ export const CardHolder = (props: { value: TileDataProps }) => {
   };
   return (
     <>
-      <Grid className={styles.outer_root} key={props.value.title} item>
+      <Grid xs={12} md={2} key={props.value.title} item>
         <Card onClick={() => setOpen(true)} className={classes.root}>
           <CardHeader
             className={styles.card}
-            avatar={
-              <Avatar aria-label="cake" className={classes.avatar}>
-                {props.value.title.charAt(0)}
-              </Avatar>
-            }
             title={textTitle(props.value.title, "header")}
             subheader={textTitle("Vegetarian Half KG", "subheader")}
           />
           <CardMedia
             style={{ fontFamily: "" }}
             className={classes.media}
-            image={props.value.img}
+            image={props.value.imgLocation}
             title={props.value.title}
           />
           <CardContent>
@@ -71,7 +66,7 @@ export const CardHolder = (props: { value: TileDataProps }) => {
           <DialogContent dividers>
             <CardMedia
               className={classes.media}
-              image={props.value.img}
+              image={props.value.imgLocation}
               title={props.value.title}
             />
             &nbsp;
@@ -98,14 +93,10 @@ export const MenuList = (props: { passedTileData: TileDataProps[] }) => {
 
   return (
     <>
-      <Grid container className={classes.root} spacing={2}>
-        <Grid item xs={12}>
-          <Grid container className={classes.inner_root} spacing={3}>
-            {props.passedTileData?.map((value: TileDataProps) => (
-              <CardHolder key={uuidv4()} value={value}></CardHolder>
-            ))}
-          </Grid>
-        </Grid>
+      <Grid container spacing={2}>
+        {props.passedTileData?.map((value: TileDataProps) => (
+          <CardHolder key={uuidv4()} value={value}></CardHolder>
+        ))}
       </Grid>
     </>
   );

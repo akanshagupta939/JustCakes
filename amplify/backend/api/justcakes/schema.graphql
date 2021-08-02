@@ -1,0 +1,10 @@
+type Cake @model {
+  id: ID!
+  imgLocation: String
+  title: String
+  price: String
+  category: String
+  description: String
+  celebration: String
+  sizeDescription: String
+}
