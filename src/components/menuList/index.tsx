@@ -89,7 +89,7 @@ export const CardHolder = (props: { value: TileDataProps }) => {
 export const MenuList = (props: { passedTileData: TileDataProps[] }) => {
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid style={{ justifyContent: "center" }} container spacing={2}>
         {props.passedTileData?.map((value: TileDataProps) => (
           <CardHolder key={uuidv4()} value={value}></CardHolder>
         ))}

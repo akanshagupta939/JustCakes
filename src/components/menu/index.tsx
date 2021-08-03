@@ -45,7 +45,7 @@ export type ListCakesQuery = {
   };
 };
 
-export const Menu = (category: Array<string>) => {
+export const Menu = () => {
   const [expanded, setExpanded] = React.useState<string | false>("A");
   let [todos, setTodos] = useState([]);
 
