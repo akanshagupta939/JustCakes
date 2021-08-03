@@ -9,10 +9,10 @@ function App() {
   const particleConfig: any = {
     particles: {
       number: {
-        value: 80,
+        value: 40,
         density: {
           enable: true,
-          value_area: 700,
+          value_area: 600,
         },
       },
       color: {

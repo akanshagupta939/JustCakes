@@ -50,17 +50,18 @@ export const Menu = (category: Array<string>) => {
   let [todos, setTodos] = useState([]);
 
   useEffect(() => {
+    async function fetchTodos() {
+      try {
+        const cakeApi = (await API.graphql(graphqlOperation(listCakes))) as {
+          data: ListCakesQuery;
+        };
+        todos = cakeApi.data.listCakes.items as any;
+        setTodos(todos);
+      } catch (err) {}
+    }
     fetchTodos();
   }, []);
-  async function fetchTodos() {
-    try {
-      const cakeApi = (await API.graphql(graphqlOperation(listCakes))) as {
-        data: ListCakesQuery;
-      };
-      todos = cakeApi.data.listCakes.items as any;
-      setTodos(todos);
-    } catch (err) {}
-  }
+
   const handleChange =
     (panel: string) => (event: React.ChangeEvent<{}>, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);

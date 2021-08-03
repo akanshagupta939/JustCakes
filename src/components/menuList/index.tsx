@@ -87,8 +87,6 @@ export const CardHolder = (props: { value: TileDataProps }) => {
   );
 };
 export const MenuList = (props: { passedTileData: TileDataProps[] }) => {
-  const classes = useStyles();
-
   return (
     <>
       <Grid container spacing={2}>
