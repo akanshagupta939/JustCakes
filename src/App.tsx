@@ -115,7 +115,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/menu" component={Menu} />
-        <Route path="/contact" component={ContactUs} />
+        <Route path="/order" component={ContactUs} />
         {/* <Route component={Error} />  */}
       </Switch>
     </div>

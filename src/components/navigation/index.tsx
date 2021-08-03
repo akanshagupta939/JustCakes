@@ -6,7 +6,7 @@ export const Navigation = () => {
   const route = [
     { to: "/", name: "Home" },
     { to: "/menu", name: "Menu" },
-    { to: "/contact", name: "Contact" },
+    { to: "/order", name: "Order Now" },
   ];
   return (
     <>
