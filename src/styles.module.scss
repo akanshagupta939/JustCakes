@@ -8,7 +8,7 @@
   height: 100%;
   position: fixed;
 }
-.header {
+.app_header {
   position: relative;
   pointer-events: none;
   font-family: OldStandardTT-Regular, Arial, sans-serif;
@@ -30,6 +30,12 @@ canvas {
 @media screen and (max-width: 1200px) {
   .inner_container {
     font-size: 20px;
+  }
+  .app_header {
+    position: relative;
+    pointer-events: none;
+    font-family: OldStandardTT-Regular, Arial, sans-serif;
+    color: #ebd9e6;
   }
 }
 @font-face {

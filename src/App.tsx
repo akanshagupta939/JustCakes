@@ -108,7 +108,7 @@ function App() {
         params={particleConfig}
         className={styles.particle_background}
       />
-      <div className={styles.header}>
+      <div className={styles.app_header}>
         <Navigation></Navigation>
       </div>
 

@@ -11,28 +11,28 @@
   color: #ffbf00;
   font-family: OldStandardTT-Regular, Arial, sans-serif;
 }
+.textStyling {
+  animation: pulse 3s;
+  font-size: 6rem;
+}
+
+.textStyling_subheader {
+  animation: pulse 3s;
+  font-size: 2.5rem;
+}
 
 @media screen and (max-width: 1200px) {
-  .header {
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 1.6;
-  }
-  .body {
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.6;
-  }
   .outer_container {
-    top: 80px;
+    top: 20px;
+    padding: none;
   }
   .textStyling {
     animation: pulse 3s;
-    font-size: 50px;
+    font-size: 3rem;
   }
   .textStyling_subheader {
     animation: pulse 3s;
-    font-size: 25px;
+    font-size: 1.5rem;
   }
 }
 @keyframes pulse {
@@ -43,13 +43,4 @@
   to {
     transform: scale(1);
   }
-}
-.textStyling {
-  animation: pulse 3s;
-  font-size: 6rem;
-}
-
-.textStyling_subheader {
-  animation: pulse 3s;
-  font-size: 2.5rem;
 }
