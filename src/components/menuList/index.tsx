@@ -5,7 +5,6 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import { useStyles } from "./tileData";
 import { DialogContent, DialogTitle, Dialog } from "@material-ui/core";

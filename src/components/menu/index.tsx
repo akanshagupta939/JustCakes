@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 import { MenuList } from "../menuList";
-import tileData, {
+import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
 } from "../menuList/tileData";
 import styles from "./styles.module.scss";
 /* src/App.js */
-import Amplify, { API, graphqlOperation } from "aws-amplify";
-import { Observable } from "rxjs";
+import { API, graphqlOperation } from "aws-amplify";
 import { listCakes } from "../../graphql/queries";
-import { GraphQLResult } from "@aws-amplify/api-graphql";
 
 const accordionData = [
   {
@@ -59,12 +57,9 @@ export const Menu = (category: Array<string>) => {
       const cakeApi = (await API.graphql(graphqlOperation(listCakes))) as {
         data: ListCakesQuery;
       };
-      console.log(cakeApi);
       todos = cakeApi.data.listCakes.items as any;
       setTodos(todos);
-    } catch (err) {
-      console.log("error fetching todos");
-    }
+    } catch (err) {}
   }
   const handleChange =
     (panel: string) => (event: React.ChangeEvent<{}>, newExpanded: boolean) => {
