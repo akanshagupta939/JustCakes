@@ -47,7 +47,6 @@ export const CardHolder = (props: { value: TileDataProps }) => {
             subheader={textTitle("Vegetarian Half KG", "subheader")}
           />
           <CardMedia
-            style={{ fontFamily: "" }}
             className={classes.media}
             image={props.value.imgLocation}
             title={props.value.title}
