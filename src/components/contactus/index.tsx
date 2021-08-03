@@ -29,7 +29,7 @@ export const ContactUs = (resumeData: ResumeDate) => {
           href="https://www.zomato.com/ncr/just-cakes-1-sector-14-gurgaon/"
         >
           <img
-            alt="Swiggy link to Just Cakes"
+            alt="Zomato link to Just Cakes"
             src="https://img.icons8.com/doodle/48/000000/zomato.png"
           />
         </a>

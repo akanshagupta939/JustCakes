@@ -6,8 +6,7 @@
   padding: 20px;
   box-sizing: border-box;
   width: 100%;
-  max-width: 800px;
-  top: 100px;
+  max-width: fit-content;
   color: #ffbf00;
   font-family: OldStandardTT-Regular, Arial, sans-serif;
 }
@@ -15,12 +14,18 @@
   animation: pulse 3s;
   font-size: 6rem;
 }
-
+.imgeStyling {
+  animation: pulse 3s;
+  padding: 20px;
+  width: 35%;
+}
 .textStyling_subheader {
   animation: pulse 3s;
   font-size: 2.5rem;
 }
-
+.body {
+  text-align: baseline;
+}
 @media screen and (max-width: 1200px) {
   .outer_container {
     top: 20px;
