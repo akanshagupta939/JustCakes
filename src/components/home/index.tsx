@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.scss";
 import Grid from "@material-ui/core/Grid";
 import { createStyles, makeStyles, Paper, Theme } from "@material-ui/core";
-import image from "./JC.jpg";
 
 interface ResumeDate {
   name: string;
@@ -37,8 +36,8 @@ export const Home = (resumeData: ResumeDate) => {
           <Grid item xs={12} sm={6}>
             <img
               className={styles.imgeStyling}
-              alt="Swiggy link to Just Cakes"
-              src={image}
+              alt="Just Cakes"
+              src="https://justcakes-gallery.s3.us-east-2.amazonaws.com/HomeImage.jpg"
             />
           </Grid>
         </Grid>
