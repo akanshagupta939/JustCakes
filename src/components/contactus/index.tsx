@@ -30,6 +30,7 @@ export const ContactUs = (resumeData: ResumeDate) => {
           href="https://www.zomato.com/ncr/just-cakes-1-sector-14-gurgaon/"
         >
           <img
+            className={styles.imageSize}
             alt="Zomato link to Just Cakes"
             src="https://img.icons8.com/doodle/48/000000/zomato.png"
           />
@@ -42,6 +43,7 @@ export const ContactUs = (resumeData: ResumeDate) => {
           href="https://www.swiggy.com/restaurants/just-cakes-sector-14-gurgaon-386611"
         >
           <img
+            className={styles.imageSize}
             alt="Swiggy link to Just Cakes"
             src="https://img.icons8.com/doodle/48/000000/swiggy.png"
           />

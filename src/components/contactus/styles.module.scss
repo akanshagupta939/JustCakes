@@ -29,6 +29,10 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .imageSize {
+    width: 35px;
+    height: 35px;
+  }
   .header {
     font-size: 30px;
     font-weight: bold;
