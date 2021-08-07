@@ -26,6 +26,7 @@ export const ContactUs = (resumeData: ResumeDate) => {
         <a
           className={styles.contactLink}
           target="blank"
+          title="Zomato link to Just Cakes"
           href="https://www.zomato.com/ncr/just-cakes-1-sector-14-gurgaon/"
         >
           <img
@@ -37,6 +38,7 @@ export const ContactUs = (resumeData: ResumeDate) => {
         <a
           className={styles.contactLink}
           target="blank"
+          title="Swiggy link to Just Cakes"
           href="https://www.swiggy.com/restaurants/just-cakes-sector-14-gurgaon-386611"
         >
           <img
@@ -49,12 +51,14 @@ export const ContactUs = (resumeData: ResumeDate) => {
           <a
             className={styles.contactLink}
             target="blank"
+            title="FB link to Just Cakes"
             href="https://www.facebook.com/JustCakesGurugram/"
           >
             <FacebookIcon fontSize="large" style={{ color: brown[500] }} />
           </a>
           &nbsp;
           <a
+            title="Instagram link to Just Cakes"
             className={styles.contactLink}
             target="blank"
             href="https://instagram.com/justcakes_gurgaon?igshid=1a1zqr707fl9w"
