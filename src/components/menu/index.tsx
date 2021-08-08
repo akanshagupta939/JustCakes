@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { MenuList } from "../menuList";
 import {
+  tileData,
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -67,9 +68,14 @@ export const Menu = () => {
       setExpanded(newExpanded ? panel : false);
     };
   const filterTileData = (category: string) => {
-    const xx = todos?.filter((x: any) => x?.category.includes(category));
+    let response;
+    if (todos.length > 0) {
+      response = todos?.filter((x: any) => x?.category.includes(category));
+    } else {
+      response = tileData?.filter((x: any) => x?.category.includes(category));
+    }
 
-    return xx;
+    return response;
   };
 
   return (
