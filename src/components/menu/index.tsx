@@ -29,6 +29,10 @@ const accordionData = [
     title: "Our Speciality",
     category: "Special",
   },
+  {
+    title: "Bento Cakes",
+    category: "Bento",
+  },
 ];
 
 export type ICakes = {
