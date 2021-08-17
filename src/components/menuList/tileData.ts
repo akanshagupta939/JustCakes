@@ -27,7 +27,6 @@ export const AccordionSummary = withStyles({
     marginBottom: -1,
     backgroundColor: "#faebd7",
     minHeight: 66,
-    fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
     "&$expanded": {
       minHeight: 56,
     },
@@ -48,11 +47,6 @@ export const AccordionDetails = withStyles((theme) => ({
 }))(MuiAccordionDetails);
 
 export const useStyles = makeStyles((theme) => ({
-  typography: {
-    body2: {
-      fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
-    },
-  },
   root: {
     flexGrow: 1,
     position: "relative",
@@ -60,7 +54,6 @@ export const useStyles = makeStyles((theme) => ({
     height: "100%",
     top: 0,
     bottom: 0,
-    fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
   },
   inner_root: {
     justifyContent: "center",
@@ -97,7 +90,6 @@ export const useStyles = makeStyles((theme) => ({
     transform: "rotate(180deg)",
   },
   avatar: {
-    fontFamily: "OldStandardTT-Regular, Arial, sans-serif",
     backgroundColor: "#e49b0f",
   },
 }));

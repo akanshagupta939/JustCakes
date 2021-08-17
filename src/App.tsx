@@ -5,6 +5,13 @@ import { Route, Switch } from "react-router-dom";
 import { Home } from "./components/home";
 import { ContactUs } from "./components/contactus";
 import { Menu } from "./components/menu";
+import {
+  createMuiTheme,
+  makeStyles,
+  createStyles,
+  Theme as AugmentedTheme,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 function App() {
   const particleConfig: any = {
     particles: {
@@ -102,23 +109,31 @@ function App() {
     },
     retina_detect: true,
   };
-  return (
-    <div className="App">
-      <Particles
-        params={particleConfig}
-        className={styles.particle_background}
-      />
-      <div className={styles.app_header}>
-        <Navigation></Navigation>
-      </div>
 
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/menu" component={Menu} />
-        <Route path="/order" component={ContactUs} />
-        {/* <Route component={Error} />  */}
-      </Switch>
-    </div>
+  const theme = createMuiTheme({
+    typography: {
+      fontFamily: ["Old Standard TT", "serif"].join(","),
+    },
+  });
+  return (
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Particles
+          params={particleConfig}
+          className={styles.particle_background}
+        />
+        <div className={styles.app_header}>
+          <Navigation></Navigation>
+        </div>
+
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/menu" component={Menu} />
+          <Route path="/order" component={ContactUs} />
+          {/* <Route component={Error} />  */}
+        </Switch>
+      </div>
+    </ThemeProvider>
   );
 }
 

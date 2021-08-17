@@ -6,10 +6,18 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Typography from "@material-ui/core/Typography";
+import { amber } from "@material-ui/core/colors";
 import { useStyles } from "./tileData";
-import { DialogContent, DialogTitle, Dialog } from "@material-ui/core";
+import {
+  DialogContent,
+  DialogTitle,
+  Dialog,
+  IconButton,
+  Link,
+} from "@material-ui/core";
 import { v4 as uuidv4 } from "uuid";
 import styles from "./styles.module.scss";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 export interface TileDataProps {
   imgLocation: string;
@@ -39,23 +47,31 @@ export const CardHolder = (props: { value: TileDataProps }) => {
   return (
     <>
       <Grid xs={12} md={2} key={props.value.title} item>
-        <Card onClick={() => setOpen(true)} className={classes.root}>
-          <CardHeader
-            className={styles.card}
-            title={textTitle(props.value.title, "header")}
-            subheader={textTitle("Vegetarian Half KG", "subheader")}
-          />
-          <CardMedia
-            className={classes.media}
-            image={props.value.imgLocation}
-            title={props.value.title}
-          />
-          <CardContent>
-            <Typography variant="h5" component="h2">
-              <p className={styles.card_subHeader}> {props.value.price}</p>
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing></CardActions>
+        <Card className={classes.root}>
+          <div onClick={() => setOpen(true)}>
+            <CardHeader
+              className={styles.card}
+              title={textTitle(props.value.title, "header")}
+              subheader={textTitle("Vegetarian Half KG", "subheader")}
+            />
+            <CardMedia
+              className={classes.media}
+              image={props.value.imgLocation}
+              title={props.value.title}
+            />
+            <CardContent>
+              <Typography variant="h5" component="h2">
+                <p className={styles.card_subHeader}> {props.value.price}</p>
+              </Typography>
+            </CardContent>
+          </div>
+          <CardActions disableSpacing>
+            <Link rel="noopener" href="https://www.justcakes-gurgaon.com/order">
+              <IconButton aria-label="share">
+                <ShoppingBasketIcon style={{ color: amber[500] }} />
+              </IconButton>
+            </Link>
+          </CardActions>
         </Card>
         <Dialog onClose={handleClose} open={open}>
           <DialogTitle id={props.value.title}>

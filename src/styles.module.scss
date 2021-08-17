@@ -11,7 +11,6 @@
 .app_header {
   position: relative;
   pointer-events: none;
-  font-family: OldStandardTT-Regular, Arial, sans-serif;
   font-size: 40px;
   font-weight: bold;
   padding: 20px;
@@ -20,6 +19,7 @@
 
 body {
   margin: 0;
+  font-family: "Old Standard TT", serif;
 }
 
 canvas {
@@ -34,26 +34,6 @@ canvas {
   .app_header {
     position: relative;
     pointer-events: none;
-    font-family: OldStandardTT-Regular, Arial, sans-serif;
     color: #ebd9e6;
   }
-}
-@font-face {
-  font-family: "OldStandardTT-Regular";
-  src: local("OldStandardTT-Regular"),
-    url(./fonts/OldStandardTT-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "OldStandardTT-Regular";
-  font-weight: 900;
-  src: local("OldStandardTT-Regular"),
-    url(./fonts/OldStandardTT-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "OldStandardTT-Regular";
-  font-weight: 900;
-  src: local("OldStandardTT-Regular"),
-    url(./fonts/OldStandardTT-Regular.ttf) format("truetype");
 }
