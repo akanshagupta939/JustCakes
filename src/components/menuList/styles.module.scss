@@ -18,7 +18,11 @@
   font-size: 0.8rem;
   margin: 0;
 }
-
+.dialog_footer {
+  text-align: center;
+  font-size: 1rem;
+  color: gray;
+}
 .outer_root {
   flex: 1;
 }

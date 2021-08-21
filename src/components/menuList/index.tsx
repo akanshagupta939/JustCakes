@@ -97,8 +97,8 @@ export const CardHolder = (props: { value: TileDataProps }) => {
               </p>
             </Typography>
             <Typography variant="h5" component="h2" gutterBottom>
-              <p className={styles.celebration}>
-                Customizable according to your requirements.
+              <p className={styles.dialog_footer}>
+                *Customizable according to your requirements.
               </p>
             </Typography>
           </DialogContent>
