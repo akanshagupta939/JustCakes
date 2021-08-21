@@ -61,7 +61,7 @@ export const CardHolder = (props: { value: TileDataProps }) => {
             />
             <CardContent>
               <Typography variant="h5" component="h2">
-                <p className={styles.card_subHeader}> {props.value.price}</p>
+                <p className={styles.card_subHeader}>{props.value.price}</p>
               </Typography>
             </CardContent>
           </div>
@@ -94,6 +94,11 @@ export const CardHolder = (props: { value: TileDataProps }) => {
             <Typography variant="h5" component="h2" gutterBottom>
               <p className={styles.sizeDescription}>
                 {props.value.sizeDescription}
+              </p>
+            </Typography>
+            <Typography variant="h5" component="h2" gutterBottom>
+              <p className={styles.celebration}>
+                Customizable according to your requirements.
               </p>
             </Typography>
           </DialogContent>

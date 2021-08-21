@@ -3,6 +3,9 @@
   font-weight: bold;
   line-height: 1;
 }
+.footer {
+  font-size: 15px;
+}
 .contactLink {
   line-height: 10px;
   display: inline-block;
@@ -44,5 +47,8 @@
   }
   .outer_container {
     top: 80px;
+  }
+  .footer {
+    font-size: 5px;
   }
 }

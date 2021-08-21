@@ -49,7 +49,7 @@ export const ContactUs = (resumeData: ResumeDate) => {
           />
         </a>
         <div>
-          <div className={styles.contactLink}>Join us on :</div>
+          <div className={styles.contactLink}>Follow us on :</div>
           <a
             className={styles.contactLink}
             target="blank"
@@ -67,6 +67,9 @@ export const ContactUs = (resumeData: ResumeDate) => {
           >
             <InstagramIcon fontSize="large" style={{ color: brown[500] }} />
           </a>
+          <div className={styles.footer}>
+            *Extra charges will be applied on delivery
+          </div>
         </div>
       </div>
     </div>
