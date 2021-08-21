@@ -52,7 +52,11 @@ export const CardHolder = (props: { value: TileDataProps }) => {
             <CardHeader
               className={styles.card}
               title={textTitle(props.value.title, "header")}
-              subheader={textTitle("Vegetarian Half KG", "subheader")}
+              subheader={
+                !props.value.category.includes("Bento")
+                  ? textTitle("Vegetarian Half KG", "subheader")
+                  : ""
+              }
             />
             <CardMedia
               className={classes.media}
