@@ -3,7 +3,8 @@ import styles from "./styles.module.scss";
 import { motion } from "framer-motion";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import { brown } from "@material-ui/core/colors";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import { brown, green } from "@material-ui/core/colors";
 
 interface ResumeDate {
   name: string;
@@ -16,7 +17,15 @@ export const ContactUs = (resumeData: ResumeDate) => {
     <div className={styles.outer_container}>
       <div className={styles.body}>
         <motion.h5 initial={{ x: 100 }} animate={{ x: 10 }}>
-          Call us to place your order: +91 8860257561
+          <a
+            className={styles.contactLink}
+            target="blank"
+            title="Chat with us on Whatsapp"
+            href=" https://wa.me/918851856358"
+          >
+            Click to chat with us on Whatsapp{" "}
+            <WhatsAppIcon fontSize="inherit" style={{ color: green[500] }} />
+          </a>
         </motion.h5>
         <h6> </h6>
         <motion.h5 initial={{ x: -100 }} animate={{ x: -10 }}>
