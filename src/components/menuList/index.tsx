@@ -65,7 +65,11 @@ export const CardHolder = (props: { value: TileDataProps }) => {
             />
             <CardContent>
               <Typography variant="h5" component="h2">
-                <p className={styles.card_subHeader}>{props.value.price}</p>
+                <p className={styles.card_subHeader}>
+                  {!props.value.category.includes("Bento")
+                    ? props.value.price
+                    : "Price on request"}
+                </p>
               </Typography>
             </CardContent>
           </div>
